@@ -14,6 +14,7 @@ public class Movies {
                 root.movies.get(5).getName(),
                 root.movies.get(6).getName(),
                 root.movies.get(7).getName());
+        System.out.println();
     }
 
     public void searchMovies(String search) {
@@ -22,6 +23,7 @@ public class Movies {
                 System.out.println(mv.getName());
             }
         }
+        System.out.println();
     }
 
     public void sortDate() {
