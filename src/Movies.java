@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Movies {
-    Root root = FileService.readFile();
+    MyMovies root = FileService.readFile();
 
 
     public void printMovies() {
@@ -18,7 +18,7 @@ public class Movies {
     }
 
     public void searchMovies(String search) {
-        for (Root.Movie mv : root.movies) {
+        for (MyMovies.Movie mv : root.movies) {
             if (mv.getName().toLowerCase(Locale.ROOT).contains(search.toLowerCase(Locale.ROOT))) {
                 System.out.println(mv.getName());
             }
@@ -29,22 +29,22 @@ public class Movies {
     public void sortDate() {
         Collections.sort(root.movies);
         System.out.println("Сортирвока по дате:");
-        for (Root.Movie m : root.movies) {
+        for (MyMovies.Movie m : root.movies) {
             System.out.printf("%s: %s%n",m.getName(),m.getYear());
         }
         System.out.println();
     }
 
     public void sortName() {
-        Comparator<Root.Movie> moviesComparator = new Comparator<Root.Movie>() {
+        Comparator<MyMovies.Movie> moviesComparator = new Comparator<MyMovies.Movie>() {
             @Override
-            public int compare(Root.Movie o1, Root.Movie o2) {
+            public int compare(MyMovies.Movie o1, MyMovies.Movie o2) {
                 return o1.getName().compareTo(o2.getName());
             }
         };
         System.out.println("Сортировка по имени фильма:");
         root.movies.sort(moviesComparator);
-        for (Root.Movie m : root.movies) {
+        for (MyMovies.Movie m : root.movies) {
             System.out.println(m.getName());
         }
     }

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Root{
+public class MyMovies {
 
     public ArrayList<Movie> movies;
 

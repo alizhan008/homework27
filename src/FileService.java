@@ -9,7 +9,7 @@ public class FileService {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path PATH = Paths.get("./movies.json");
 
-    public static Root readFile(){
+    public static MyMovies readFile(){
 
         String json = "";
         try{
@@ -18,7 +18,7 @@ public class FileService {
             e.printStackTrace();
         }
 
-        return GSON.fromJson(json, Root.class);
+        return GSON.fromJson(json, MyMovies.class);
     }
 
 }
