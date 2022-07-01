@@ -11,7 +11,7 @@ public class Main {
         movies.printMovies();
         movies.sortDate();
         movies.sortName();
-//        movies.sortProducer(); не смог реализовать этот метод и 2е задание.
+////        movies.sortProducer(); не смог реализовать этот метод и 2е задание.
         MoviesMap moviesMap = new MoviesMap();
         moviesMap.fillMap();
     }
